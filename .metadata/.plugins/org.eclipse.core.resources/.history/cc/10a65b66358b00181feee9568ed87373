@@ -1,0 +1,14 @@
+package oneClass;
+
+public class ExR1 {
+	public static void main(String[] args) {
+		System.out.println(exr1(6));
+		
+	}
+	
+	private static String exr1(int n) {
+		if( n<=0 ) return "";
+		return exr1(n-3)+n+exr1(n-2)+n;
+
+	}
+}

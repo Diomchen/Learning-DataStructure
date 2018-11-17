@@ -1,0 +1,48 @@
+package oneClass;
+
+import java.util.Scanner;
+
+public class toBinaryStringDemo {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Please input num:");
+		int num = in.nextInt();		
+		/*
+		System.out.println("Please input N:");
+		int N = in.nextInt();
+	
+		int t = 0;
+		String str = "";
+		if(num == 0) {
+			System.out.println(0); 
+			System.exit(0);
+		}
+		
+		while(num!=0) {
+			t = num%N;
+			str += String.valueOf(t);
+			num = (num-t)/2;
+		}
+		
+		String midstr = "";
+		
+		char[] arr = str.toCharArray();
+		
+		for(int i=str.length()-1 ; i>=0 ; i--) {
+			midstr += arr[i];
+		}
+		
+		System.out.println(midstr);
+		
+		*/
+		
+		System.out.println(Integer.toBinaryString(num));
+		String s = "";
+		for(int n = num ; n>0 ; n/=2) {
+			s = (n%2)+s;
+		}
+		System.out.println(s);
+		
+	}
+}

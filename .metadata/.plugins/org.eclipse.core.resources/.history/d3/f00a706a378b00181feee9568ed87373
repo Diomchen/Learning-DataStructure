@@ -1,0 +1,8 @@
+package oneClass;
+
+public class Fibnacci {
+	public static void main(String[] args) {
+		
+		System.out.println("shkjdshjfhs");
+	}
+}

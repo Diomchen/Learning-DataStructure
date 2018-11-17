@@ -1,0 +1,7 @@
+package twoClass;
+
+public class TBSCTest {
+	public static void main(String[] args) {
+		System.out.println("sdadadada");
+	}
+}

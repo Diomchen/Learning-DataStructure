@@ -1,0 +1,24 @@
+package oneClass;
+
+public class LN {
+	public static void main(String[] args) {
+		
+		long N = 2;
+//		System.out.println(cursive(N));
+		System.out.println(lnEXS(cursive(N)));
+		
+	}
+	
+	public static long cursive(long N) {
+		if(N == 0|| N == 1)return 1;
+		return cursive(N-1)*N;
+	}
+	
+	public static long lnEXS(long x) {
+		long k = 0;
+		while((x/=Math.E)>.01) {
+			k++;
+		}
+		return k;
+	}
+}

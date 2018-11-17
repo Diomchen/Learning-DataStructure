@@ -1,0 +1,26 @@
+package oneClass;
+
+public class Fibnacci {
+	public static void main(String[] args) {
+		
+		long [] b = new long [100];
+		
+		for(int N = 0 ; N<100 ; N++) {
+			System.out.println(N+" "+F(N,b));
+			b[N] = F(N,b);
+		}
+		
+	}
+	
+	private static long F(int N,long[] b) {
+		int [] arr;
+		if(N == 1||N == 0) {
+			return 1;
+		}
+		else {
+			return b[N-1]+b[N-2];
+		}
+		
+	}
+	
+}

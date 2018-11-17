@@ -1,0 +1,33 @@
+package oneClass;
+
+import java.util.Scanner;
+
+public class ReadLine {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Please input N:");
+		int N = in.nextInt();
+		
+		String[] name = new String[N];
+		double [] num = new double[N];
+		
+		double FNum ;
+		double SNum ;
+		
+		System.out.println("Please input name,the first number,the secon number:");
+		for(int i=0 ; i<N ; i++) {
+			name[i] = in.nextLine();
+			FNum = in.nextDouble();
+			SNum = in.nextDouble();
+			num[i] = FNum+SNum;
+		}
+		
+		for(int i=0 ; i<N ; i++) {
+			System.out.printf("%s \t %.3f\n",name[i],num[i]);
+		}
+		
+		
+	}
+	
+}

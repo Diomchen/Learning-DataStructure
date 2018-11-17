@@ -1,0 +1,42 @@
+package oneClass;
+
+public class Binomial {
+	public static void main(String[] args) {
+		System.out.println(binomial(100,50,0.25));
+		
+	}
+	
+
+
+private static void test27(){
+    int N = 20;
+    int K = 10;
+    double[][] tempResult = new double[N + 1][K + 1];
+    for(int i = 0; i <= N; i++){
+        for(int j = 0; j <= K; j++){
+            tempResult[i][j] = -1.0;
+        }
+    }
+    
+    double result = binomial(N, K, 0.25, tempResult);
+    System.out.println("1 result = " + result);
+    
+    double result2 = binomial(N, K, 0.25, tempResult);
+    System.out.println("2 result = " + result2);
+}
+
+private static double binomial(int n, int k, double p, double[][] tempResult){
+    //System.out.println("n = " + n + ", k = " + k + ", p = " + p);
+    if(n == 0 && k == 0){
+        tempResult[n][k] = 1.0;
+        return 1.0;
+    }
+    if(n < 0 || k < 0){
+        return 0.0;
+    }
+    if(tempResult[n][k] == -1.0){
+        tempResult[n][k] = (1.0 - p) * binomial(n - 1, k, p, tempResult) + p * binomial(n-1, k-1, p, tempResult);
+    }
+    return tempResult[n][k];
+}
+}

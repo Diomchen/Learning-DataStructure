@@ -1,0 +1,13 @@
+package oneClass;
+
+
+public class StaticLibrary {
+	public static void main(String[] args) {
+		double t = 9.0;
+		double c = t;
+		while(Math.abs(t - c/t)>.001) {
+			t = (t+c/t)/2;
+		}
+		System.out.println("t:"+t);
+	}
+}

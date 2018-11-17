@@ -1,0 +1,28 @@
+package oneClass;
+
+import java.util.Scanner;
+
+public class MaxConmmonDivisor {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please input A:");
+		int A = in.nextInt();
+		
+		System.out.println("Please input B:");
+		int B = in.nextInt();
+		
+		System.out.println(divisor(A,B));
+	}
+	
+	public static int divisor(int A,int B) {
+		if(A<B) {
+			int r = B;
+			A = r;
+			B = A;
+		}
+		if(B == 0)return A;
+		
+		return divisor(A,A%B);
+		
+	}
+}
